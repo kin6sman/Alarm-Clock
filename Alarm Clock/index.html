@@ -1,92 +1,69 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Alarm Clock</title>
-</head>
-<body>
-  <!-- outer Container of Alarm Box -->
-  <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <!-- outer Container of Alarm Box -->
+    <div class="container">
+      <div class="heading"></div>
 
-    <div class="heading"></div>
-        
       <!-- Alarm Clock Box Div -->
       <div class="alarmClock">
+        <!-- used to center All Elements inside alarm box -->
+        <div class="center">
+          <!-- Current Time Display container -->
+          <div class="currentTime">
+            <!-- current time -->
 
-          
+            <h1 id="clock" onload="currTime()">Time</h1>
+          </div>
 
-            <!-- used to center All Elements inside alarm box -->
-            <div class="center">
-                      
-              
+          <form class="setAlarm">
+            <!-- Set Alarm container -->
+            <div class="setTime">
+              <select name="a_hour" id="a_hour">
+                <option value="Hour" selected hidden>Hour</option>
+              </select>
 
-                  <!-- Current Time Display container -->
-                  <div class="currentTime" >
+              <select name="a_min" id="a_min">
+                <option value="Minute" selected hidden>Minute</option>
+              </select>
 
-                    <!-- current time -->
-                    
-                    <h1 id="clock" onload="currTime()">Time</h1>
-                    
-                  </div>
-                 
-              <form class="setAlarm">
-                  <!-- Set Alarm container -->
-                  <div class="setTime">
+              <select name="a_amPM" id="a_amPM">
+                <option value="AM/PM" selected hidden>AM/PM</option>
 
-                   
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
 
-                     <select name="a_hour"  id="a_hour">
+              <!-- set time button -->
+              <input
+                type="button"
+                id="a_btn"
+                value="Set Alarm"
+                onclick="addItem()"
+              />
+            </div>
+          </form>
 
-                         <option value="Hour" selected hidden>Hour</option>
-                      
-                     </select> 
+          <div>
+            <div>
+              <h3 class="alarmHeading">Upcoming Alarms</h3>
+            </div>
 
-                     <select name="a_min" id="a_min">
-
-                          <option value="Minute" selected hidden>Minute</option>
-                          
-
-                      </select> 
-
-
-                      <select name="a_amPM" id="a_amPM">
-                        
-                        <option value="AM/PM" selected hidden>AM/PM</option>
-
-                           <option value="AM">AM</option>
-                           <option value="PM">PM</option>
-
-                      </select>
-
-                    <!-- set time button -->
-                    <input type="button" id="a_btn" value="Set Alarm" onclick="addItem()">
-                  </div>
-              </form>      
-
-                  <div>
-                    
-                    
-                    <div>
-                      <h3 class="alarmHeading" >Upcoming Alarms</h3>
-                  </div>
-
-                  <!-- List that will contain upcoming alarms -->
-                  <div id="list-container">
-                      <ul id="list">
-                          
-                      </ul>
-                  </div>
-
-                  </div>
-
-                    
-                </div>       
-          
+            <!-- List that will contain upcoming alarms -->
+            <div id="list-container">
+              <ul id="list"></ul>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
