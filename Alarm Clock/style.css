@@ -1,3 +1,4 @@
+/* resetting everything */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,8 @@
   box-sizing: border-box;
 }
 
+
+/* Background Page of webpage */
 .container {
 width: 100%;
 height: 100vh;
@@ -18,7 +21,7 @@ flex-direction: column;
 
 
 
-
+/* Alarm clock box div */
 .alarmClock {
   
 background: #3a4452;
@@ -27,6 +30,8 @@ border-radius: 10px;
 
 }
 
+
+/* centering all the element inside alarm box */
 .alarmClock .center {
   height: 600px;
   width: 500px;
@@ -36,10 +41,13 @@ border-radius: 10px;
   justify-content: center;
 }
 
+
+
 .alarmClock div {
   margin: 20px 10px;
 }
 
+/* clock styling */
 .alarmClock #clock {
   color: #fff;
   box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -51,7 +59,7 @@ border-radius: 10px;
 }
 
 
-
+/* styling select option and set Alarm button */
 .alarmClock form .setTime select,input {
   border-radius: 10px;
   box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -65,6 +73,8 @@ border-radius: 10px;
   padding: 10px;
 }
 
+
+/* form button styling */
 .alarmClock form .setTime #a_btn {
   margin-left: 20px;
   width: 100px;
@@ -77,7 +87,7 @@ border-radius: 10px;
 }
 
   
-
+/* styling dynamically added list */
  #list {
   height: 300px;
   /* width: 400px; */
@@ -91,10 +101,12 @@ border-radius: 10px;
   display: none;
 }
 
+/* hiding scrollbar */
 #list {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 
 .new {
   /* height: 100px; */
